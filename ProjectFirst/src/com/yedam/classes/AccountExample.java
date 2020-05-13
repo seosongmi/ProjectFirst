@@ -6,6 +6,7 @@ public class AccountExample {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		Account[] accounts = new Account[100];
+		
 		while(true) {
 			System.out.println("-----------------------");
 			System.out.println("1.계좌생성 2.계좌목록 3.예금 4.출금 5.종료");
@@ -71,5 +72,6 @@ public class AccountExample {
 				break;
 			}
 		}
+		System.out.println("프로그램 종료");
 	}
 }
