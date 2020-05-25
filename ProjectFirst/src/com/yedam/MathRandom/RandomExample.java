@@ -2,7 +2,7 @@ package com.yedam.MathRandom;
 
 import java.util.Arrays;
 import java.util.Random;
-
+//p.537 실습 
 public class RandomExample {
 
 	public static void main(String[] args) {

@@ -1,5 +1,5 @@
 package com.yedam.MathRandom;
-
+//p.534 실습
 public class MathExample {
 	public static void main(String[] args) {
 		int v1 = Math.abs(-5);
