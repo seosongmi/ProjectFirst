@@ -20,8 +20,12 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void deleteBoard(List<Board> list, Board board) {
-		// TODO Auto-generated method stub
+	public void deleteBoard(List<Board> list, String title) {
+		for (int i =0; i<list.size(); i++) {
+			if (list.get(i).getTitle().equals(title)) {
+				list.remove(i);
+			}
+		}
 		
 	}
 

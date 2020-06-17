@@ -16,7 +16,7 @@ public class BoardMain {
 			System.out.println("1.입력  2.수정 3.삭제 4.전체리스트 5.종료");
 			System.out.println("=============================");
 			System.out.println("선택> ");
-			int menu = scn.nextInt();
+			int menu = scn.nextInt(); scn.nextLine();
 			if (menu == 1) {
 				System.out.println("제목입력:");
 				String title = scn.nextLine();
@@ -28,19 +28,26 @@ public class BoardMain {
 
 				service.inputBoard(list, board);
 			} else if (menu == 2) {
-				System.out.println("제목입력:");
+				System.out.print("제목입력:");
 				String title = scn.nextLine();
-				System.out.println("바꿀내용:");
+				System.out.print("바꿀내용:");
 				String content = scn.nextLine();
 				Board board = new Board(title, content, null);
 				
 				service.updateBoard(list, board);
 			} else if (menu == 3) {
+				System.out.print("제목입력");
+				String title = scn.nextLine();
+				service.deleteBoard(list,title);
+				
 
 			} else if (menu == 4) {
 				service.listBoard(list);
 
+			} else if (menu == 5) {
+				break;
 			}
 		}
+		System.out.println("end of prog");
 	}
 }

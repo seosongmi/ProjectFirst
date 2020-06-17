@@ -22,9 +22,9 @@ public class Example09 {
 				System.out.println("배열이 생성되었습니다.");
 			} else if (selectNo == 2) {
 				int i = 0;
-				for(int score : scores)
+				for(int score : scores) {
 				System.out.println("점수를 입력하세요.");
-				int score = scn.nextInt();
+				score = scn.nextInt();
 				scores[i++] = score;
 			}
 		} else if (selectNo ==3) {
@@ -48,4 +48,5 @@ public class Example09 {
 		} //end of if
 		System.out.println("프로그램종료.");
 	} // end of while
+}
 }

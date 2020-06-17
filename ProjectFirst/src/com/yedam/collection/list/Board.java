@@ -1,9 +1,9 @@
 package com.yedam.collection.list;
 
 public class Board {
-	String title;
-	String contents;
-	String writer;
+	private String title; //제목
+	private String contents; //내용
+	private String writer; //작성자
 	
 	Board (String title, String contents, String writer) {
 		this.title = title;
@@ -33,6 +33,11 @@ public class Board {
 
 	public void setWriter(String writer) {
 		this.writer = writer;
+	}
+
+	@Override
+	public String toString() {
+		return "Board [title=" + title + ", contents=" + contents + ", writer=" + writer + "]";
 	}
 	
 
