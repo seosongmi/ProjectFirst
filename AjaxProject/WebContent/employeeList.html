@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>employeeList.html</title>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$.ajax({
+			url:"GetEmpServlet",
+			success: function(result, status, xhr) {
+				console.log(result);
+				var data = JSON.parse(result);
+				console.log(data);
+				data.forEach(function(a){
+					document.write("<h2>ID: " + a.id + "</h2>");
+					document.write("<h2>FName: " + a.first_name + "</h2>");
+					document.write("<h2>Email: " + a.email + "</h2>");
+					document.write("<h2>Salary: " + a.salary + "</h2>");
+				})
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<p id="show"></p>
+</body>
+</html>
